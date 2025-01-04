@@ -1,0 +1,23 @@
+/* ポップアップ全体のスタイル */
+body {
+    width: 400px; /* 横幅を広げる */
+    height: 600px; /* 必要に応じて高さも調整 */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+font-size: 18px;
+margin: 10px 0;
+}
+
+ul {
+list-style-type: none;
+padding: 0;
+}
+
+li {
+padding: 5px;
+border-bottom: 1px solid #ddd;
+}
