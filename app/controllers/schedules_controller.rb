@@ -17,11 +17,10 @@ class SchedulesController < ApplicationController
 
   def update
     schedule = Schedule.find(params[:id])
-    if schedule.update(schedule_params)
-      render json: schedule
-    else
-      render json: { errors: schedule.errors.full_messages }, status: :unprocessable_entity
-    end
+    schedule.update!(goal: params[:goal], weather: params[:weather])
+    render json: { message: '更新しました', schedule: schedule }
+  rescue ActiveRecord::RecordInvalid => e
+    render json: { error: e.message }, status: :unprocessable_entity
   end
 
   def destroy

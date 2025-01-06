@@ -16,6 +16,9 @@ module OneDaySchedulerForChrome
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w(assets tasks))
 
+    config.time_zone = 'Tokyo' # 必要なタイムゾーンを指定
+    config.active_record.default_timezone = :local
+
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'

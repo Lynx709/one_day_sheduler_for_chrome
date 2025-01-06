@@ -12,4 +12,5 @@ class Schedule < ApplicationRecord
   # scope
   
   # rogic
+  
 end

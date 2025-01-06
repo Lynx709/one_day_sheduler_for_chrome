@@ -28,6 +28,11 @@ class DateSummariesController < ApplicationController
     head :no_content
   end
 
+  def today
+    summary = DateSummary.find_or_create_today_summary
+    render json: summary, include: :schedules
+  end
+
   private
 
   def summary_params

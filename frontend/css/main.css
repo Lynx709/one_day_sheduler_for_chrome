@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fixed-size {
+    width: 400px;
+    height: 600px;
+}

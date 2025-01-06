@@ -1,7 +1,11 @@
 class SettingsController < ApplicationController
-  def show
+  def index
     setting = Setting.first_or_create!(time_interval: 60, start_time: "08:00", end_time: "20:00")
-    render json: setting
+    render json: {
+      time_interval: setting.time_interval,
+      start_time: setting.start_time,
+      end_time: setting.end_time
+    }
   end
 
   def update

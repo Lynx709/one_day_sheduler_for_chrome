@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Day Scheduler</title>
+    <link href="../dist/main.css" rel="stylesheet">
+    </head>
+    <body class="bg-gray-100 p-4 fixed-size">
+    <!-- Header -->
+    <header class="flex justify-between items-center bg-blue-500 text-white p-2 rounded">
+        <img src="../assets/icon.png" alt="Icon" class="h-8 w-8 rounded">
+        <button id="settings-link" class="h-8 w-8 bg-center bg-no-repeat bg-contain rounded shadow"
+                style="background-image: url('../assets/setting.png'); background-color: #f2faff;">
+        </button>
+    </header>
+    
+
+    <!-- Main Content -->
+    <main class="mt-4">
+        <!-- Date and Completion Rate -->
+        <section class="flex justify-between items-center">
+        <div>
+            <h2 class="text-lg font-semibold">📅 Date Today</h2>
+            <p id="date-today" class="text-blue-500 text-sm">yyyy/mm/dd</p>
+        </div>
+        <div>
+            <p class="text-sm">Complete Rate</p>
+            <p id="complete-rate" class="text-blue-500 font-bold">0%</p>
+        </div>
+        </section>
+
+        <!-- Schedule List -->
+        <section class="mt-4">
+        <ul id="schedule-list" class="space-y-2">
+            <li class="flex justify-between items-center bg-white p-2 shadow rounded">
+                <div class="flex items-center space-x-2">
+                    <span class="font-bold">10:00 ~</span>
+                    <span class="text-gray-700">this time goal</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <img src="../assets/sunny.png" alt="Sunny" class="h-10 w-10">
+                    <img src="../assets/cloudy.png" alt="Cloudy" class="h-10 w-10">
+                    <img src="../assets/rainy.png" alt="Rainy" class="h-10 w-10">
+                </div>
+            </li>
+        </ul>
+        </section>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-between mt-4">
+        <button id="edit-button" class="w-1/2 bg-blue-500 text-white py-2 rounded shadow mr-2">Edit</button>
+        <button id="memo-button" class="w-1/2 bg-green-500 text-white py-2 rounded shadow ml-2">Memo</button>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    </body>
+</html>
